@@ -38,6 +38,14 @@ export const metadata: Metadata = {
     description:
       "부동산 전세·월세 특약부터 근로계약서, 셀프 민사 소장 초안까지 로그인 없이 무료로 점검하세요.",
     url: SITE_URL,
+    images: [
+      {
+        url: `${SITE_URL}/icon.svg`,
+        width: 512,
+        height: 512,
+        alt: "계약서·생활법률 해독기",
+      },
+    ],
   },
   robots: {
     index: true,

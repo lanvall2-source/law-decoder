@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import {
   FileSearch,
@@ -12,6 +13,12 @@ import {
 import { CURATED_TERMS } from "@/data/terms";
 import { GUIDE_ARTICLES } from "@/data/guides";
 import { AdSlot } from "@/components/common/AdSlot";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   return (
