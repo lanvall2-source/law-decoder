@@ -153,7 +153,7 @@ export function ContractReviewer() {
           type="button"
           onClick={handleAnalyze}
           disabled={loading}
-          className="w-full py-3.5 px-5 rounded-xl bg-[#0F172A] hover:bg-slate-800 disabled:opacity-60 text-white font-extrabold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-sm"
+          className="w-full py-3.5 px-5 rounded-xl bg-[#0F172A] hover:bg-slate-800 disabled:opacity-60 text-white font-semibold text-sm flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-sm"
         >
           {loading ? (
             <>
@@ -178,7 +178,7 @@ export function ContractReviewer() {
 
       {/* 분석 결과 리포트 */}
       {result && (
-        <div className="space-y-5 animate-in fade-in duration-300">
+        <div className="space-y-5 ">
           <LegalDisclaimer />
 
           <AdSlot slotId="review-result-top" format="banner" />
@@ -188,7 +188,7 @@ export function ContractReviewer() {
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-2.5">
                 <span
-                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold border ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${
                     RISK_BADGE[result.overallRisk].bg
                   } ${RISK_BADGE[result.overallRisk].text} ${
                     RISK_BADGE[result.overallRisk].border
@@ -219,7 +219,7 @@ export function ContractReviewer() {
 
           {/* 조항별 상세 분석 & 수정 제안 */}
           <div className="space-y-4">
-            <h2 className="text-base font-extrabold text-slate-900">
+            <h2 className="text-base font-semibold text-slate-900">
               상세 조항 점검 및 방어용 수정 제안 ({result.clauses.length}건)
             </h2>
             {result.clauses.map((clause) => {
@@ -230,7 +230,7 @@ export function ContractReviewer() {
                   className="bg-white rounded-2xl border border-slate-200 p-5 space-y-4 shadow-xs"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <h3 className="text-sm sm:text-base font-extrabold text-slate-900">
+                    <h3 className="text-sm sm:text-base font-semibold text-slate-900">
                       {clause.title}
                     </h3>
                     <span
@@ -257,8 +257,8 @@ export function ContractReviewer() {
                   {/* 수정 제안 특약 */}
                   <div className="rounded-xl bg-emerald-50/70 border border-emerald-200 p-3.5 space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-extrabold text-emerald-900">
-                        ✅ 방어용 수정 제안 특약
+                      <span className="text-xs font-semibold text-emerald-900">
+                        방어용 수정 제안 특약
                       </span>
                       <button
                         type="button"
@@ -310,7 +310,7 @@ export function ContractReviewer() {
           {/* 행동 체크리스트 */}
           {result.actionChecklist.length > 0 && (
             <div className="bg-white rounded-2xl border border-slate-200 p-5 space-y-3">
-              <h3 className="text-sm font-extrabold text-slate-900">
+              <h3 className="text-sm font-semibold text-slate-900">
                 서명 전 최종 행동 체크리스트
               </h3>
               <ul className="space-y-2">
@@ -332,7 +332,7 @@ export function ContractReviewer() {
       {/* 최근 로컬 검토 내역 (LocalStorage) */}
       {recentReviews.length > 0 && !result && (
         <div className="bg-white rounded-2xl border border-slate-200 p-5 space-y-3">
-          <div className="flex items-center gap-2 text-xs font-extrabold text-slate-700">
+          <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
             <History className="w-4 h-4 text-slate-500" />
             <span>이 브라우저에 임시 저장된 최근 검토 기록 ({recentReviews.length}건)</span>
           </div>
@@ -355,7 +355,7 @@ export function ContractReviewer() {
                   </span>
                   <p className="text-xs font-bold text-slate-800 truncate">{rev.summary}</p>
                 </div>
-                <span className="text-[11px] font-bold text-blue-700 shrink-0">다시 보기 →</span>
+                <span className="text-[11px] font-bold text-blue-700 shrink-0">다시 보기</span>
               </button>
             ))}
           </div>

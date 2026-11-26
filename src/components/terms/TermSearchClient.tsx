@@ -86,7 +86,7 @@ export function TermSearchClient() {
                     <span className="inline-block text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 mb-1">
                       {item.category}
                     </span>
-                    <h2 className="text-lg font-extrabold text-slate-900">
+                    <h2 className="text-lg font-semibold text-slate-900">
                       {item.term}{" "}
                       {item.hanja && (
                         <span className="text-xs font-normal text-slate-400">({item.hanja})</span>

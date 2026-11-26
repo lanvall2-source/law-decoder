@@ -14,7 +14,7 @@ export default function LawsuitPage() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900">
           민사 소장·내용증명 셀프 작성 도우미
         </h1>
         <p className="text-xs sm:text-sm text-slate-600">

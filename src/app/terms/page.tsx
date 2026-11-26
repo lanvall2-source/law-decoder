@@ -15,7 +15,7 @@ export default function TermsPage() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900">
           법제처 법률용어 쉬운 번역기
         </h1>
         <p className="text-xs sm:text-sm text-slate-600">

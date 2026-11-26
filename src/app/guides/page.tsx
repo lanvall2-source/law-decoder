@@ -17,7 +17,7 @@ export default function GuidesPage() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-2 break-keep">
+        <h1 className="text-xl sm:text-3xl font-semibold text-slate-900 flex items-center gap-2 break-keep">
           <Compass className="w-6 h-6 sm:w-7 sm:h-7 text-amber-500 shrink-0" />
           <span>계약 전 필수 체크리스트 가이드</span>
         </h1>
@@ -33,7 +33,7 @@ export default function GuidesPage() {
           <Link
             key={guide.slug}
             href={`/guides/${guide.slug}`}
-            className="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-[#0F172A] hover:shadow-md transition-all flex flex-col justify-between space-y-4"
+            className="group bg-white rounded-2xl border border-slate-200 p-6 hover:border-[#0F172A] hover:shadow-md transition-colors flex flex-col justify-between space-y-4"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between text-xs">
@@ -42,7 +42,7 @@ export default function GuidesPage() {
                 </span>
                 <span className="text-slate-400">{guide.readingTime}</span>
               </div>
-              <h2 className="text-lg font-extrabold text-slate-900 group-hover:text-blue-700 leading-snug">
+              <h2 className="text-lg font-semibold text-slate-900 group-hover:text-blue-700 leading-snug">
                 {guide.title}
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">

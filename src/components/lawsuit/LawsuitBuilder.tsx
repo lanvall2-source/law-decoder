@@ -128,7 +128,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
                 }`}
               >
                 <span
-                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-extrabold ${
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
                     step === s.num
                       ? "bg-[#0F172A] text-white"
                       : step > s.num
@@ -146,7 +146,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
           {/* Step 1: 사건 유형 */}
           {step === 1 && (
             <div className="space-y-4">
-              <h2 className="text-base font-extrabold text-slate-900">
+              <h2 className="text-base font-semibold text-slate-900">
                 1단계: 어떤 사건의 소장(또는 내용증명) 초안이 필요하신가요?
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -155,13 +155,13 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
                     key={c.id}
                     type="button"
                     onClick={() => setForm({ ...form, caseType: c.id })}
-                    className={`text-left p-4 rounded-xl border transition-all cursor-pointer ${
+                    className={`text-left p-4 rounded-xl border transition-colors cursor-pointer ${
                       form.caseType === c.id
                         ? "border-[#0F172A] bg-slate-50 ring-1 ring-[#0F172A]"
                         : "border-slate-200 hover:border-slate-300"
                     }`}
                   >
-                    <div className="text-sm font-extrabold text-slate-900">{c.label}</div>
+                    <div className="text-sm font-semibold text-slate-900">{c.label}</div>
                     <div className="text-xs text-slate-500 mt-1">{c.desc}</div>
                   </button>
                 ))}
@@ -182,7 +182,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
           {/* Step 2: 당사자 정보 (가명 입력 안내) */}
           {step === 2 && (
             <div className="space-y-4">
-              <h2 className="text-base font-extrabold text-slate-900">
+              <h2 className="text-base font-semibold text-slate-900">
                 2단계: 당사자 정보 입력 (개인정보 보호)
               </h2>
               <div className="rounded-xl bg-blue-50 border border-blue-200 p-3.5 text-xs text-blue-900 flex items-start gap-2">
@@ -239,7 +239,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
           {/* Step 3: 청구금액 및 사실관계 */}
           {step === 3 && (
             <div className="space-y-4">
-              <h2 className="text-base font-extrabold text-slate-900">
+              <h2 className="text-base font-semibold text-slate-900">
                 3단계: 청구 금액 및 핵심 사실관계
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -317,7 +317,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
                   type="button"
                   onClick={handleGenerate}
                   disabled={loading}
-                  className="px-6 py-3 rounded-xl bg-[#0F172A] hover:bg-slate-800 text-white text-xs sm:text-sm font-extrabold inline-flex items-center gap-2 cursor-pointer shadow-sm"
+                  className="px-6 py-3 rounded-xl bg-[#0F172A] hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold inline-flex items-center gap-2 cursor-pointer shadow-sm"
                 >
                   {loading ? (
                     <>
@@ -339,7 +339,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
 
       {/* 생성된 소장 초안 결과 */}
       {output && (
-        <div className="space-y-5 animate-in fade-in duration-300">
+        <div className="space-y-5 ">
           <LegalDisclaimer />
 
           <div className="print:hidden flex flex-wrap items-center justify-between gap-2 bg-white p-4 rounded-2xl border border-slate-200">
@@ -348,7 +348,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
               onClick={() => setOutput(null)}
               className="px-3.5 py-2 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 hover:bg-slate-50 cursor-pointer"
             >
-              ← 다시 작성하기
+              다시 작성하기
             </button>
             <div className="flex flex-wrap gap-2">
               <button
@@ -383,14 +383,14 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
           {/* 법원 전자소송 양식 구조화 본문 */}
           <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-xs space-y-6">
             <div className="text-center border-b border-slate-200 pb-4">
-              <h2 className="text-xl font-extrabold text-slate-900">{output.title}</h2>
+              <h2 className="text-xl font-semibold text-slate-900">{output.title}</h2>
               <p className="text-xs text-slate-500 mt-1">
                 원고: {form.plaintiffName} / 피고: {form.defendantName}
               </p>
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-sm font-extrabold text-[#0F172A] bg-slate-100 px-3 py-1.5 rounded-lg inline-block">
+              <h3 className="text-sm font-semibold text-[#0F172A] bg-slate-100 px-3 py-1.5 rounded-lg inline-block">
                 1. 청구취지
               </h3>
               <pre className="whitespace-pre-wrap font-sans text-xs sm:text-sm text-slate-800 leading-relaxed bg-slate-50/60 p-4 rounded-xl border border-slate-200">
@@ -399,7 +399,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-sm font-extrabold text-[#0F172A] bg-slate-100 px-3 py-1.5 rounded-lg inline-block">
+              <h3 className="text-sm font-semibold text-[#0F172A] bg-slate-100 px-3 py-1.5 rounded-lg inline-block">
                 2. 청구원인
               </h3>
               <pre className="whitespace-pre-wrap font-sans text-xs sm:text-sm text-slate-800 leading-relaxed bg-slate-50/60 p-4 rounded-xl border border-slate-200">
@@ -408,7 +408,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-sm font-extrabold text-[#0F172A] bg-slate-100 px-3 py-1.5 rounded-lg inline-block">
+              <h3 className="text-sm font-semibold text-[#0F172A] bg-slate-100 px-3 py-1.5 rounded-lg inline-block">
                 3. 입증방법 (제출 증거 체크리스트)
               </h3>
               <ul className="space-y-2 p-4 rounded-xl bg-amber-50/50 border border-amber-200 text-xs sm:text-sm text-slate-800">
@@ -439,7 +439,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
 
       {lawsuitDrafts.length > 0 && !output && (
         <div className="bg-white rounded-2xl border border-slate-200 p-5 space-y-2">
-          <h3 className="text-xs font-extrabold text-slate-600">
+          <h3 className="text-xs font-semibold text-slate-600">
             임시 저장된 소장 초안 ({lawsuitDrafts.length}건)
           </h3>
           {lawsuitDrafts.slice(0, 3).map((d) => (
@@ -450,7 +450,7 @@ ${doc.evidenceChecklist.map((e) => `- ${e}`).join("\n")}
               className="w-full text-left p-3 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800 flex justify-between cursor-pointer"
             >
               <span>{d.title}</span>
-              <span className="text-blue-700">불러오기 →</span>
+              <span className="text-blue-700">불러오기</span>
             </button>
           ))}
         </div>

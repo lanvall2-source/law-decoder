@@ -93,7 +93,7 @@ export default async function GuideDetailPage({ params }: PageProps) {
           <span className="text-slate-400">· {guide.readingTime}</span>
           <span className="text-slate-400">· 업데이트 {guide.updatedAt}</span>
         </div>
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900 leading-snug">
           {guide.title}
         </h1>
         <p className="text-sm text-slate-600 leading-relaxed">{guide.description}</p>
@@ -103,8 +103,8 @@ export default async function GuideDetailPage({ params }: PageProps) {
 
       {/* 핵심 체크리스트 박스 */}
       <section className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-5 sm:p-6 space-y-3">
-        <h2 className="text-base font-extrabold text-emerald-950">
-          ✅ 한눈에 보는 핵심 체크리스트
+        <h2 className="text-base font-semibold text-emerald-950">
+          핵심 체크리스트
         </h2>
         <ul className="space-y-2.5">
           {guide.checklist.map((item, idx) => (
@@ -120,7 +120,7 @@ export default async function GuideDetailPage({ params }: PageProps) {
       <section className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-6">
         {guide.sections.map((sec, idx) => (
           <div key={idx} className="space-y-2">
-            <h2 className="text-lg font-extrabold text-slate-900">{sec.heading}</h2>
+            <h2 className="text-lg font-semibold text-slate-900">{sec.heading}</h2>
             <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{sec.body}</p>
           </div>
         ))}
@@ -129,7 +129,7 @@ export default async function GuideDetailPage({ params }: PageProps) {
       {/* FAQ */}
       {guide.faqs.length > 0 && (
         <section className="bg-white rounded-2xl border border-slate-200 p-6 space-y-4">
-          <h2 className="text-lg font-extrabold text-slate-900">자주 묻는 질문 (FAQ)</h2>
+          <h2 className="text-lg font-semibold text-slate-900">자주 묻는 질문 (FAQ)</h2>
           <div className="space-y-3">
             {guide.faqs.map((faq, idx) => (
               <div key={idx} className="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-1.5">
@@ -144,14 +144,14 @@ export default async function GuideDetailPage({ params }: PageProps) {
       {/* CTA to Main AI Review Tool */}
       <div className="rounded-2xl bg-[#0F172A] text-white p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-md">
         <div className="space-y-1">
-          <h3 className="text-lg font-extrabold">지금 내 계약서 특약을 바로 점검해 보세요</h3>
+          <h3 className="text-lg font-semibold">지금 내 계약서 특약을 바로 점검해 보세요</h3>
           <p className="text-xs sm:text-sm text-slate-300">
             가이드 내용과 비교해 독소조항이 없는지 AI가 무료로 해독해 드립니다.
           </p>
         </div>
         <Link
           href="/review"
-          className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs sm:text-sm shrink-0 transition-colors"
+          className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs sm:text-sm shrink-0 transition-colors"
         >
           <FileSearch className="w-4 h-4" />
           <span>AI 계약서 검토하러 가기</span>

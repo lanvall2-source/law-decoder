@@ -22,11 +22,8 @@ export function Header() {
             <Scale className="w-5 h-5" />
           </div>
           <div className="flex flex-col">
-            <span className="text-sm sm:text-base font-extrabold tracking-tight leading-none">
+            <span className="text-sm sm:text-base font-semibold tracking-tight leading-none">
               계약서·생활법률 해독기
-            </span>
-            <span className="text-[10px] text-slate-400 mt-0.5 hidden sm:inline">
-              Zero-Login AI 계약 검토 · 법제처 용어 번역
             </span>
           </div>
         </Link>

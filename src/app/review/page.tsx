@@ -14,7 +14,7 @@ export default function ReviewPage() {
   return (
     <div className="space-y-6">
       <div className="space-y-2">
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900">
           계약서 독소조항 & 분쟁 소지 해독기
         </h1>
         <p className="text-xs sm:text-sm text-slate-600">

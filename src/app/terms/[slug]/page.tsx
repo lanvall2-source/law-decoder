@@ -70,7 +70,7 @@ export default async function TermDetailPage({ params }: PageProps) {
         <span className="inline-block text-xs font-bold px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700">
           {term.category}
         </span>
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-slate-900">
           {term.term}{" "}
           {term.hanja && <span className="text-lg font-medium text-slate-400">({term.hanja})</span>}
         </h1>
@@ -83,7 +83,7 @@ export default async function TermDetailPage({ params }: PageProps) {
 
       <section className="bg-white rounded-2xl border border-slate-200 p-6 space-y-5">
         <div>
-          <h2 className="text-sm font-extrabold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mb-2">
+          <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-1.5 mb-2">
             <BookOpen className="w-4 h-4 text-[#0F172A]" />
             <span>법제처 법령용어 공식 원문</span>
           </h2>
@@ -93,7 +93,7 @@ export default async function TermDetailPage({ params }: PageProps) {
         </div>
 
         <div>
-          <h2 className="text-sm font-extrabold text-amber-900 flex items-center gap-1.5 mb-2">
+          <h2 className="text-sm font-semibold text-amber-900 flex items-center gap-1.5 mb-2">
             <Sparkles className="w-4 h-4 text-amber-600" />
             <span>초등학생도 이해하는 3줄 요약</span>
           </h2>
@@ -106,13 +106,13 @@ export default async function TermDetailPage({ params }: PageProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-blue-50/60 border border-blue-200 rounded-xl p-4 space-y-1.5">
-            <h3 className="text-xs font-extrabold text-blue-900">계약서 실전 적용 예시</h3>
+            <h3 className="text-xs font-semibold text-blue-900">계약서 실전 적용 예시</h3>
             <p className="text-xs sm:text-sm text-slate-800 leading-relaxed">
               {term.contractExample}
             </p>
           </div>
           <div className="bg-red-50/60 border border-red-200 rounded-xl p-4 space-y-1.5">
-            <h3 className="text-xs font-extrabold text-red-900 flex items-center gap-1">
+            <h3 className="text-xs font-semibold text-red-900 flex items-center gap-1">
               <AlertTriangle className="w-3.5 h-3.5" /> 꼭 확인해야 할 주의사항
             </h3>
             <p className="text-xs sm:text-sm text-slate-800 leading-relaxed">
@@ -125,7 +125,7 @@ export default async function TermDetailPage({ params }: PageProps) {
       {/* FAQ Section */}
       {term.faqs.length > 0 && (
         <section className="bg-white rounded-2xl border border-slate-200 p-6 space-y-4">
-          <h2 className="text-lg font-extrabold text-slate-900">자주 묻는 질문 (FAQ)</h2>
+          <h2 className="text-lg font-semibold text-slate-900">자주 묻는 질문 (FAQ)</h2>
           <div className="space-y-3">
             {term.faqs.map((faq, idx) => (
               <div key={idx} className="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-1.5">
@@ -140,14 +140,14 @@ export default async function TermDetailPage({ params }: PageProps) {
       {/* CTA to Main Tool */}
       <div className="rounded-2xl bg-[#0F172A] text-white p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <h3 className="text-base font-extrabold">내 계약서에도 &lsquo;{term.term}&rsquo; 조항이 있나요?</h3>
+          <h3 className="text-base font-semibold">내 계약서에도 &lsquo;{term.term}&rsquo; 조항이 있나요?</h3>
           <p className="text-xs text-slate-300 mt-1">
             계약서 문구를 붙여넣으면 불리한 독소조항인지 AI가 무료로 점검해 드립니다.
           </p>
         </div>
         <Link
           href="/review"
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs shrink-0 transition-colors"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold text-xs shrink-0 transition-colors"
         >
           <FileSearch className="w-4 h-4" />
           <span>계약서 무료 점검하기</span>
