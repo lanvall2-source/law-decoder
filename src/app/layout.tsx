@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
+import { GoogleAnalytics } from "@/components/common/GoogleAnalytics";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://law-decoder.vercel.app";
 
@@ -79,6 +80,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+        <GoogleAnalytics />
         <Header />
         <main className="flex-1 w-full max-w-5xl mx-auto px-4 py-6 sm:py-8">
           {children}
